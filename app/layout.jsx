@@ -1,34 +1,25 @@
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["500", "600", "700"],
 });
 
 export const metadata = {
-  title: "Andrea Pérez | Estudiante de Derecho",
+  title: "Andrea Perez | Estudiante de Derecho",
   description:
-    "Portafolio profesional de Andrea Pérez, estudiante de Derecho en la Universidad de Barcelona con foco en derecho internacional, debate y diplomacia.",
-  applicationName: "Andrea Pérez Portfolio",
+    "Portafolio profesional de Andrea Perez - Estudiante de Derecho en la Universidad de Barcelona, especializada en derecho internacional y derechos humanos.",
+  applicationName: "Andrea Perez Portfolio",
 };
 
 export const viewport = {
-  themeColor: "#b88592",
+  themeColor: "#ac505b",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
-      <body className={`${manrope.variable} ${cormorant.variable}`}>
-        {children}
-      </body>
+    <html lang="es" className="bg-background scroll-smooth">
+      <body className={`${geist.className} antialiased`}>{children}</body>
     </html>
   );
 }
